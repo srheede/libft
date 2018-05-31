@@ -6,18 +6,17 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 14:46:53 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/30 16:48:56 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 10:42:04 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include <stdio.h>
 
 int		ft_getlen(int n)
 {
 	int i;
 
-	i = 1;
+	i = 2;
 	if (n < 0)
 	{
 		n *= -1;
@@ -35,21 +34,24 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	i = ft_getlen(n);
+	j = 0;
 	str = ft_memalloc(i);
+	if (!str)
+		return (NULL);
 	if (n < 0)
 	{
 		n *= -1;
-		str[0] = '-';
+		j = 1;
 	}
-	j = i;
-	while (i > 0)
+	str[--i] = '\0';
+	while (i--)
 	{
-		str[i - 1] = (n % 10) + '0';
+		str[i] = n % 10 + '0';
 		n /= 10;
-		i--;
 	}
-	str[j] = '\0';
+	if (j)
+		str[0] = '-';
 	return (str);
 }
