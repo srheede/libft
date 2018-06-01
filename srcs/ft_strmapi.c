@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 11:23:39 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/31 11:25:17 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 15:54:52 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *buffer;
-	int i;
+	char	*buffer;
+	int		i;
 
 	i = 0;
 	if (s && f)

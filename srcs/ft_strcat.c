@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 02:45:04 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/23 05:24:19 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 15:59:38 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	ft_strcpy(s1 + ft_strlen(s1), s2);	
+	ft_strcpy(s1 + ft_strlen(s1), s2);
 	return (s1);
-}	
+}

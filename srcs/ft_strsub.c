@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 17:42:02 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/31 13:35:45 by srheede          ###   ########.fr       */
+/*   Updated: 2018/06/01 10:26:06 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *sub_str;
-	int i;
+	char	*sub_str;
+	int		i;
 
 	if (s)
 	{

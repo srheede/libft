@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 01:55:51 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/27 07:30:56 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 15:50:40 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned int i;
-	unsigned char *buffer_src;
-	unsigned char *buffer_dst;
+	unsigned int	i;
+	unsigned char	*buffer_src;
+	unsigned char	*buffer_dst;
 
 	i = 0;
 	buffer_src = (unsigned char *)src;
@@ -26,7 +26,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		buffer_dst[i] = buffer_src[i];
 		if (buffer_src[i] == (unsigned char)c)
 			return (dst + i + 1);
-			i++;
+		i++;
 	}
 	return (NULL);
 }

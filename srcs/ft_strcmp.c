@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 20:33:48 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/21 20:35:38 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 15:52:05 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int		ft_strcmp(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
-	return ((unsigned char) *s1 - (unsigned char) *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

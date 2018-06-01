@@ -6,50 +6,52 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 17:12:08 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/27 01:22:04 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 23:18:07 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_atoi(const char *str)
+static int		ft_sign(char c)
 {
-	int				i;
-	unsigned int	j;
+	if (c == '-')
+		return (-1);
+	if (c == '+')
+		return (1);
+	return (0);
+}
+
+static size_t	ft_result(const char *str)
+{
+	size_t			i;
 	unsigned int	digit;
 
-	j = 0;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-	{
-		i = 1;
-		str++;
-	}
-	else
-	{
-		i = 0;
-		if (*str == '+')
-			str++;
-	}
+	i = 0;
 	while (str)
 	{
 		digit = *str - '0';
 		if (digit > 9)
 			break ;
-		j = (10 * j) + digit;
-		if (j == 2147483648 && i)
-			return (-2147483648);
-		if (j > 2147483647)
-		{
-			if (i)	
-				return (0);
-			if (!i)
-				return (-1);
-		}
+		i = (10 * i) + digit;
 		str++;
 	}
+	return (i);
+}
+
+int				ft_atoi(const char *str)
+{
+	int		i;
+	size_t	j;
+
+	while (ft_isspace(*str))
+		str++;
+	i = ft_sign(*str);
 	if (i)
+		str++;
+	j = ft_result(str);
+	if (j == 2147483648 && i == -1)
+		return (-2147483648);
+	if (i == -1)
 		j *= -1;
 	return (j);
 }

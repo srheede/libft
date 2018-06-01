@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 13:00:43 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/30 13:07:17 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 15:46:41 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*ft_strnew(size_t size)
 	if (buffer == NULL)
 		return (NULL);
 	ft_memset(buffer, '\0', size + 1);
-		return (buffer);
+	return (buffer);
 }

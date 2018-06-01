@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 20:40:01 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/30 21:57:07 by srheede          ###   ########.fr       */
+/*   Updated: 2018/06/01 11:01:00 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int i;
-	int j;
-	char *buffer;
+	int		i;
+	int		j;
+	char	*buffer;
 
 	if (s)
 	{
@@ -28,11 +28,8 @@ char	*ft_strtrim(char const *s)
 			j--;
 		j = j - i + 1;
 		if (j <= 0)
-			return ("");
-		buffer = ft_memalloc(j + 1);
-		if (!buffer || j <= 0)
-			return (NULL);
-		ft_strncpy(buffer, &s[i], j);
+			return (ft_strsub(s, 0, 0));
+		buffer = ft_strsub(s, i, j);
 		return (buffer);
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 13:44:37 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/31 13:51:29 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 15:51:34 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 		free(list);
 		list = list_next;
 	}
-		*alst = NULL;
+	*alst = NULL;
 }

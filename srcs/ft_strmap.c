@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 11:04:47 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/31 11:21:11 by srheede          ###   ########.fr       */
+/*   Updated: 2018/05/31 15:44:55 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char *buffer;
-	int i;
+	char	*buffer;
+	int		i;
 
 	i = 0;
 	if (s && f)
